@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "com/hibernate/hibernate_cfg_cavers.dtd">
+<hibernate-configuration>
+	<!-- 配置连接数据库信息 -->
+	<session-factory>
+		<!-- 数据库基本连接信息 -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost/myweb</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!--结束-->
+		<!-- 数据库连接池大小 -->
+		<property name="connection.pool_size">20</property>
+		
+		<!-- 是否在控制台输出sql语句 -->
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- hibernate每次从数据库取出并放入到JDBC的Statement中的记录条数，值越大，读取数据库越少，速度越快 -->
+		<property name="jdbc.fetch_size">50</property>
+		
+		 <!--Hibernate批量插入,删除和更新时每次操作的记录数。Batch Size越大，
+		 	批量操作的向数据库发送Sql的次数越少，速度就越快，同样耗用内存就越大-->  
+		<property name="jdbc.batch_size"></property>
+		
+		 <!--是否允许Hibernate用JDBC的可滚动的结果集。对分页的结果集。对分页时的设置非常有帮助-->   
+		<property name="jdbc.use_scrollable_resultset">false</property>
+		
+		<!--连接数据库时是否使用Unicode编码-->   
+        <property name="Connection.useUnicode">true</property>  
+        
+        <!--连接数据库时数据的传输字符集编码方式-->   
+    	<property name="connection.characterEncoding">utf-8</property> 
+    	
+    	<!--Hibernate使用的数据库方言,确定连接的数据库类型-->   
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+             
+        <!--指定映射文件-->          
+        <mapping resource="com/model/user.hbm.xml"></mapping>
+	</session-factory>
+</hibernate-configuration>
