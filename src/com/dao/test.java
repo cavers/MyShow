@@ -2,15 +2,15 @@ package com.dao;
 
 import java.util.List;
 
-import com.model.user;
+import com.model.User;
 
-public class test {
+public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		userDao ud=new userDao();
-		List<user> test1=ud.getAllUser();
-		for(user u:test1){
+		UserDao ud=new UserDao();
+		List<User> test1=ud.getAllUser();
+		for(User u:test1){
 			System.out.println(u);
 		}
 	}

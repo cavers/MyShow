@@ -4,15 +4,15 @@ import java.util.List;
 
 import org.hibernate.Session;
 
-import com.hibernate.hib_cavers;
-import com.model.user;
+import com.hibernate.Hib_cavers;
+import com.model.User;
 
-public class userDao {
-	Session session=hib_cavers.openSession();
+public class UserDao {
+	Session session=Hib_cavers.openSession();
 	//查询所有的用户信息
-	public List<user> getAllUser(){
+	public List<User> getAllUser(){
 		System.out.println("asd");
-		return (List<user>) session.createQuery("from users").list();
+		return (List<User>) session.createQuery("from users").list();
 	}
 	
 }

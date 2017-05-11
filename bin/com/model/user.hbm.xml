@@ -2,12 +2,12 @@
 <!DOCTYPE hibernate-mapping SYSTEM "hibernate-hbm_cavers-3.0.dtd" >
 
 <hibernate-mapping package="com.model">
-	<class name="user" table="users">
+	<class name="User" table="users">
 		<id name="id" type="java.lang.Integer">
 			<column name="id"></column>
 			<generator class="native"></generator>
 		</id>
-		<property name="userName" type="java.lang.String" column="userName"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
 		<property name="password" type="java.lang.String" column="password"></property>
 		<property name="name" type="java.lang.String" column="name"></property>
 		<property name="sex" type="java.lang.String" column="sex"></property>
